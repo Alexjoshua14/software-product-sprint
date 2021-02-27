@@ -101,6 +101,7 @@ body {
     width: 35vw;
     height: 60vh;
     align-items: center;
+    justify-content: center;
 }
 
 .slides-1:first-child, .slides-2:first-child {

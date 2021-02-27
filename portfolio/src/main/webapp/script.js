@@ -33,32 +33,35 @@ function addRandomGreeting() {
 
 // I need to figure out how to seperate the
 // different picture sections. 
-let slideIndex = 0;
-// showSlides(slideIndex, 'slides-1');
-// showSlides(slideIndex, 'slides-2');
+let slideIndex = [0, 0];
+let slideId = ["slides-1", "slides-2"];
 
 // Next/previous controls
-function changeSlides(n, slideId) {
-    showSlides(slideIndex += n, slideId);
+function changeSlides(n, sectionNumber) {
+    //Adjust for zero indexing
+    sectionNumber -= 1;
+    showSlides(slideIndex[sectionNumber] += n, sectionNumber);
 }
 
 /**
  * 
- * @param {number} n The value by which to change the current slide index
+ * @param {number} index The index of the slide to display
  * @param {string} slides The id name of the group of slides
  */
-function showSlides(n, slideId) {
-    let slides = document.getElementsByClassName(slideId);
+function showSlides(index, sectionNumber) {
+    let slides = document.getElementsByClassName(slideId[sectionNumber]);
     console.dir(slides);
-    if (n >= slides.length) {
-        slideIndex = 0;
-    } else if (n < 0) {
-        slideIndex = slides.length;
+
+    if (index >= slides.length) {
+        slideIndex[sectionNumber] = 0;
+    } else if (index < 0) {
+        slideIndex[sectionNumber] = slides.length;
     }
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slides[slideIndex].style.display = "flex";
-    console.log(slideIndex);
+
+    slides[slideIndex[sectionNumber]].style.display = "flex";
+    console.log(slideIndex[sectionNumber]);
 }
