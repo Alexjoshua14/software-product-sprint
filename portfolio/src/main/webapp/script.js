@@ -26,3 +26,39 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+/** 
+ * Cycles through pictures
+*/
+
+// I need to figure out how to seperate the
+// different picture sections. 
+let slideIndex = 0;
+// showSlides(slideIndex, 'slides-1');
+// showSlides(slideIndex, 'slides-2');
+
+// Next/previous controls
+function changeSlides(n, slideId) {
+    showSlides(slideIndex += n, slideId);
+}
+
+/**
+ * 
+ * @param {number} n The value by which to change the current slide index
+ * @param {string} slides The id name of the group of slides
+ */
+function showSlides(n, slideId) {
+    let slides = document.getElementsByClassName(slideId);
+    console.dir(slides);
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } else if (n < 0) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex].style.display = "flex";
+    console.log(slideIndex);
+}

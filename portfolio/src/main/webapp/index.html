@@ -8,10 +8,12 @@
   </head>
   <body>
     <div id="content">
+
       <section class="fwh-section" id="home">
         <h1>Alex Joshua</h1>
         <h2>Undergraduate at Williams College</h2>
       </section>
+
       <section class="fwh-section" id="about">
         <img src="/images/me1.jpg" width=40% height=40% />
         <p>
@@ -20,13 +22,52 @@
         art. 
         </p>
       </section>
+
       <section class="fwh-section" id="art-gallery">
         <div class="art-container" style="align-self: flex-start;">
-          <img src="./images/1a.JPG"/>
+            
+          <div class="slide  fade  slides-1">
+            <img src="./images/1a.JPG"/>
+          </div>
+
+          <div class="slide  fade  slides-1">
+            <img src="./images/1e.JPG"/> 
+          </div>
+
+          <div class="slide  fade  slides-1">
+            <img src="./images/1c.JPG"/>
+          </div>
+
+          <div class="slide  fade  slides-1">
+            <img src="./images/1d.JPG"/>
+          </div>
+
+          <a class="prev" onclick="changeSlides(-1, 'slides-1')">&#10094</a>
+          <a class="next" onclick="changeSlides(1, 'slides-1')">&#10095</a>
         </div>
+        
         <div class="art-container" style="align-self: flex-end;">
-          <img src="./images/3a.JPG" style="align-self: flex-end;">
+
+          <div class="slide  fade  slides-2">
+            <img src="./images/3a.JPG" >
+          </div>
+
+          <div class="slide  fade  slides-2">
+            <img src="./images/3b.JPG" >
+          </div>
+
+          <div class="slide  fade  slides-2">
+            <img src="./images/3c.JPG" >
+          </div>
+
+          <div class="slide  fade  slides-2">
+            <img src="./images/3d.JPG" >
+          </div>
+
+          <a class="prev" onclick="changeSlides(-1, 'slides-2')">&#10094</a>
+          <a class="next" onclick="changeSlides(1, 'slides-2')">&#10095</a>
         </div>
+
       </section>
 
       <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p>
