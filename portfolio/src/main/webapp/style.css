@@ -1,5 +1,6 @@
 :root {
     --black: #191414;
+    --jet: #3E3A3A;
     --brown-1: #362622;
     --brown-2: #533830;
     --light-brown: #725A54;
@@ -8,25 +9,12 @@
     --blue-green: #36969E;
     --blue: #6C91C2;
     --pink: #EF767A;
-    --white: #F8FFF4;
+    --white: #FFFFFF;
 }
 
 body {
     margin: 0;
     background: var(--black);
-}
-
-.fwh-section {
-    height: 100vh;
-    width: 80vw;
-    margin: 0vh 10vw;
-    background: var(--green);
-    box-sizing: border-box;
-    /* border-radius: 2em; */
-}
-
-.fwh-slide p {
-    margin: 0;
 }
 
 #content {
@@ -38,8 +26,23 @@ body {
   justify-content: center;
   flex-direction: column;  
   align-items: center;
-  border-radius: 1em;  
+
+  background: linear-gradient(24deg, var(--black), var(--jet));
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fwh-section {
+    height: 90vh;
+    width: 90vw;
+    margin: 5vh 5vw;
+    background: var(--black);
+    box-sizing: border-box;
+    box-shadow: 0 0 21px 12px rgb(0 0 0 / 42%);
+    /* border-radius: 2em; */
+}
+
+.fwh-slide p {
+    margin: 0;
 }
 
 #greeting-container {
@@ -51,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 #home h1 {
@@ -63,32 +67,51 @@ body {
 }
 
 #about {
-    background: var(--white);
+    background: transparent;
     display: flex;
     align-items: center;
     flex-direction: row;
-
+    box-shadow: none;
 }
 
 #about img {
-    height: 60vh;
+    height: auto;
+    max-height: -webkit-fill-available;
     width: auto;
+    max-width: 100%;
 }
 
 #about p {
     padding: 8%;
 }
 
+#art-portfolio {
+    background: var(--blue-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+    min-height: 90vh;
+}
+
+#art-portfolio h1 {
+    font-size: xx-large;
+}
+
 #art-gallery {
     background: var(--black);
     display: flex;
     align-items: center;
+    width: 100%;
+    height: -webkit-fill-available;   
+    min-height: 70vh; 
 }
+
 
 .art-container {
     width: 35vw;
     position: relative;
-    margin: 2.5vw;
+    margin: auto;
 }
 
 .art-container img {
@@ -108,6 +131,26 @@ body {
     display: flex;
 }
 
+.left, .right {
+    display: flex;
+    align-items: center;
+    height: -webkit-fill-available;
+    max-height: 90vh;
+}
+
+.left {
+    width: 55%;
+    margin: 0 5% 0 0;
+}
+
+.right {
+    width: 40%;
+    padding: 5%;
+    text-align: center;
+    background: var(--black);
+    box-shadow: 0 0 21px 12px rgb(0 0 0 / 42%);
+    color: var(--white);
+}
 
 .prev, .next {
     cursor: pointer;
