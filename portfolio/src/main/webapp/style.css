@@ -90,20 +90,24 @@ body {
     max-width: 100%;
 }
 
+#about h1 {
+    margin-bottom: 0.001vh;
+}
+
 #about p {
-    padding: 8%;
+    padding: 0 8% 8%;
 }
 
-#technologies {
+/* #technologies {
     background: var(--pink);
-}
+} */
 
-#technologies ul {
+#about ul {
     text-align: center;
     list-style: none;
-    font-size: large;
     line-height: 2;
-    padding: 1vw;
+    padding: 0 1vh 1vh;
+    margin-top: 0.001vh;
 }
 
 #art-portfolio {
