@@ -124,6 +124,7 @@ body {
     min-height: 70vh; 
 }
 
+
 .fa {
     padding: 0.675em;
     font-size: 3vw;
@@ -186,6 +187,16 @@ body {
 .art-container img {
     max-width: 35vw;
     max-height: 60vh;
+}
+
+.caption-text {
+  color: var(--white);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -5vh;
+  width: 100%;
+  text-align: center;
 }
 
 .slide {
