@@ -128,6 +128,22 @@ body {
     min-height: 70vh; 
 }
 
+#servlet-redirect {
+    background: var(--pink);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#servlet-redirect h1 {
+    text-align: center;
+}
+
+#servlet-redirect a {
+    text-decoration: none;
+}
 
 .fa {
     padding: 0.675em;
