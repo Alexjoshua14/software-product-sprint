@@ -50,12 +50,11 @@ function changeSlides(n, sectionNumber) {
  */
 function showSlides(index, sectionNumber) {
     let slides = document.getElementsByClassName(slideId[sectionNumber]);
-    console.dir(slides);
 
     if (index >= slides.length) {
         slideIndex[sectionNumber] = 0;
     } else if (index < 0) {
-        slideIndex[sectionNumber] = slides.length;
+        slideIndex[sectionNumber] = slides.length - 1;
     }
 
     for (let i = 0; i < slides.length; i++) {
@@ -63,5 +62,4 @@ function showSlides(index, sectionNumber) {
     }
 
     slides[slideIndex[sectionNumber]].style.display = "flex";
-    console.log(slideIndex[sectionNumber]);
 }
