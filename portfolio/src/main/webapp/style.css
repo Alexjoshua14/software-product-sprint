@@ -145,6 +145,13 @@ body {
     text-decoration: none;
 }
 
+#contact-form {
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .servlet-response-container {
     background: var(--jet);
     color: var(--white);
