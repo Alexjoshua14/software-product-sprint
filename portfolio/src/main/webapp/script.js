@@ -63,3 +63,11 @@ function showSlides(index, sectionNumber) {
 
     slides[slideIndex[sectionNumber]].style.display = "flex";
 }
+
+async function sayHello() {
+    const responseFromServer = await fetch('/hello');
+    const textResponse = await responseFromServer.text();
+
+    const helloContainer = document.getElementById('hello-container');
+    helloContainer.innerText = textResponse;
+}
