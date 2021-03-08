@@ -114,12 +114,20 @@
       </section>
 
       <section class="fwh-section" id="contact-form">
-        <form action="/form-handler" method="POST">
-          <p>Enter some text here:</p>
-          <textarea name="text-input">hello world</textarea>
-          <br />
-          <input type="submit" />
-        </form>
+        <div class="left">
+          <h1>Get in touch</h1>
+        </div>
+        <div class="right">
+          <form action="/form-handler" method="POST">
+            <p>Email:</p>
+            <textarea name="email-input" cols="30"></textarea>
+            <br />
+            <p>Message:</p>
+            <textarea name="message-input" rows="15" cols="40"></textarea>
+            <br />
+            <input type="submit" />
+          </form>
+        </div>
       </section>
 
       <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p>
