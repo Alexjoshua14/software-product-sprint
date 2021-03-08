@@ -21,7 +21,7 @@ public class FactsServlet extends HttpServlet {
 
     @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    ArrayList<String> facts = new ArrayList<String>();
+    ArrayList<String> facts = new ArrayList<>();
     facts.add("I have been playing piano for more than a decade.");
     facts.add("My favorite aspect of computer science is its endless possibilities to make the world a better place.");
     facts.add("I grew up aspiring to be an architect.");
