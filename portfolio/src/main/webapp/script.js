@@ -65,9 +65,31 @@ function showSlides(index, sectionNumber) {
 }
 
 async function sayHello() {
+    // Fetch Json object from servlet
     const responseFromServer = await fetch('/hello');
-    const textResponse = await responseFromServer.text();
+    const jsonObj = await responseFromServer.json();
 
+    // Parse the Json object for a random phrase
+    const responseLength = jsonObj.length;
+    const randomIndex = Math.floor(Math.random() * Math.floor(responseLength));
+    const textResponse = jsonObj[randomIndex];
+
+    // Send this phrase to the helloContainer in index.js
     const helloContainer = document.getElementById('hello-container');
     helloContainer.innerText = textResponse;
+}
+
+async function randomFact() {
+    // Fetch Json object from servlet
+    const responseFromServer = await fetch('/facts');
+    const jsonObj = await responseFromServer.json();
+
+    // Parse the Json object for a random phrase
+    const responseLength = jsonObj.length;
+    const randomIndex = Math.floor(Math.random() * Math.floor(responseLength));
+    const textResponse = jsonObj[randomIndex];
+
+    // Send this phrase to the helloContainer in index.js
+    const factContainer = document.getElementById('fact-container');
+    factContainer.innerText = textResponse;
 }

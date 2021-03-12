@@ -145,6 +145,29 @@ body {
     text-decoration: none;
 }
 
+#contact-form {
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servlet-response-container {
+    background: var(--jet);
+    color: var(--white);
+    min-width: 0;
+    min-height: 0;
+    max-width: 40vw;
+    max-height: 50vh;
+    box-shadow: 0 0 25px 0px rgb(0 0 0 / 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3vh 5vw;
+    margin: 5%;
+}
+
 .fa {
     padding: 0.675em;
     font-size: 3vw;
@@ -236,11 +259,17 @@ body {
     align-items: center;
     height: -webkit-fill-available;
     max-height: 90vh;
+    justify-content: center;
 }
 
 .left {
     width: 55%;
     margin: 0 5% 0 0;
+}
+
+.left h1 {
+    text-align: center;
+    justify-content: center;
 }
 
 .right {
