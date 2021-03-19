@@ -93,3 +93,42 @@ async function randomFact() {
     const factContainer = document.getElementById('fact-container');
     factContainer.innerText = textResponse;
 }
+
+/** Fetches messages from the server and adds them to the DOM. */
+function loadMessages() {
+  fetch('/list-messages').then(response => response.json()).then((tasks) => {
+    const taskListElement = document.getElementById('message-list');
+    tasks.forEach((message) => {
+      taskListElement.appendChild(createTaskElement(message));
+    })
+  });
+}
+
+/** Creates an element that represents a message, including its delete button. */
+function createMessageElement(message) {
+  const messageElement = document.createElement('li');
+  messageElement.className = 'message';
+
+  const detailsElement = document.createElement('span');
+  detailsElement.innerText = task.email + ": " + task.message;
+
+  const deleteButtonElement = document.createElement('button');
+  deleteButtonElement.innerText = 'Delete';
+  deleteButtonElement.addEventListener('click', () => {
+    deleteMessage(message);
+
+    // Remove the message from the DOM.
+    messageElement.remove();
+  });
+
+  messageElement.appendChild(detailsElement);
+  messageElement.appendChild(deleteButtonElement);
+  return messageElement;
+}
+
+/** Tells the server to delete the message. */
+function deleteMessage(message) {
+  const params = new URLSearchParams();
+  params.append('id', message.id);
+  fetch('/delete-message', {method: 'POST', body: params});
+}
