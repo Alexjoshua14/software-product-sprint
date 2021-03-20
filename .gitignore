@@ -4,4 +4,4 @@
 .settings/
 target/
 .theia/
-vscode/
+.vscode/
