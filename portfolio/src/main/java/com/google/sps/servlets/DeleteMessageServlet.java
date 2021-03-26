@@ -38,7 +38,7 @@ public class DeleteMessageServlet extends HttpServlet {
     long id = Long.parseLong(request.getParameter("id"));
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
     Key messageEntityKey = keyFactory.newKey(id);
     datastore.delete(messageEntityKey);
   }
