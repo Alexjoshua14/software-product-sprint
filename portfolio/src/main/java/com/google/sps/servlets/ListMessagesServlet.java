@@ -57,7 +57,6 @@ public class ListMessagesServlet extends HttpServlet {
       String message = entity.getString("message");
       long timestamp = entity.getLong("timestamp");
 
-      //Task task = new Task(id, email, message, timestamp);
       Message item = new Message(id, email, message, timestamp); 
       messages.add(item);
     }
