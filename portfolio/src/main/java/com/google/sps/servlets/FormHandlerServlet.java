@@ -16,8 +16,10 @@ import com.google.cloud.datastore.KeyFactory;
 
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
-
-
+    /**
+     *
+     */
+    private static final long serialVersionUID = 6734233536872851287L;
 
     @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
