@@ -3,137 +3,333 @@
   <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
+
     <div id="content">
+      <!-- Home Section -->
+      <div class="container section-container" id="home">
+        <div class="row top-bar">
+          <div class="col-6" id="name">
+            <h3>Alex Joshua</h3>
+          </div>
+          <div class="col" id="navBar">
+            <ul>
+              <li><a class="navLink" href="#about">About</a></li>
+              <li><a class="navLink" href="#csPortfolio">Projects</a></li>
+              <li><a class="navLink" href="#artPortfolio">Portfolio</a></li>
+              <li><a class="navLink" href="#contact">Contact</a></li> 
+            </ul>
+          </div>
+        </div>
 
-      <section class="fwh-section" id="home">
-        <h1>Alex Joshua</h1>
-        <h2>Undergraduate at Williams College</h2>
-        <div>
-            <a href="https://github.com/alexjoshua14" target="_blank" class="fa fa-github"></a>
-            <a href="https://www.instagram.com/aartistry14/" target="_blank" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/alexander-joshua-a655a6157/" target="_blank" class="fa fa-linkedin"></a>
+          <div class="row" style="height: 91.25vh; width: inherit; background-color: var(--pink)">
+          <!--<div class="cell col-4" style="background-color: white; opacity: 50%;">
+            Img here
+          </div>-->
+          <div class="cell col" id="intro">
+            <h1>Hey, I'm Alex.</h1>
+            <h2>
+              I'm a senior Computer Science and Studio Art double major at Williams College.
+            </h2>
+            <div id="socials">
+              <a href="https://github.com/alexjoshua14" target="_blank" class="fa fa-github"></a>
+              <a href="https://www.instagram.com/aartistry14/" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://www.linkedin.com/in/alexander-joshua/" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+          </div>
         </div>
-        <div class="bottom-arrow">
-            <a href="#about"><i class="arrow down"></i></a>
-        </div>
-      </section>
+      </div>
 
-      <section class="fwh-section" id="about">
-        <div class="left">
-          <img src="/images/me1.jpg" width=40% height=40% />
+      <!-- About Section -->
+      <div class="container section-container" id="about">
+        <div class="row" style="height: 6.25vh; padding-bottom: 2.5vh; width: inherit">
+          <div class="col">
+          
+          </div>
         </div>
-        <div class="right">
-        <h1>About Me</h1>
-          <p>
-            Hey! I am a junior at Williams College 
-            double majoring in Computer Science and Studio 
-            art.
-          </p>
-          <h1>Langauges</h1>
-          <ul> 
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>C</li>
-            <li>Python</li>
-            <li>HTML</li>
-          </ul>       
+
+        <div class="row" style="min-height: 93.75vh; width: inherit;">
+          <div class="cell col-8" id="info">
+            <h1> About me <h1>
+              <p>I'm a senior Computer Science and Studio Art double major at <a href="https://www.williams.edu/" target="_blank" class="embedded-link">Williams College</a>, originally from the Pacific Northwest. 
+                While I'm still trying to figure out what exactly I want to do within the tech industry, my passion for software 
+                engineering lays in the endless possibilities that coding presents. I am currently 
+                looking for a full time New Grad Software Engineering Position working on either 
+                front-end or full-stack. If you would like to learn more about me feel free to explore 
+                my social medias linked at the top, my resume, and/or some of my coding and art projects 
+                attached below.</p>
+            <h2>Langauges</h2>
+            <ul> 
+              <li><b>Proficient:</b> Java, JavaScript, HTML+CSS</li>
+              <li><b>Familiar:</b> C, Rust, Python, Bash</li>              
+            </ul> 
+          </div>
+          <div class="cell col" id="selfImg">
+            <img src="/images/me1.jpg" width=100% />
+          </div>
         </div>
         
-      </section>
+      </div>
 
-      <section class="fwh-section" id="art-portfolio">
-        <h1>Art</h1>  
-        <div id="art-gallery">
-        <div class="art-container" style="align-self: flex-start;">
+      <!-- CSCI Portfolio -->
+      <div class="container section-container" id="csPortfolio">
+        <div class="row" style="height: 6.25vh; padding-bottom: 2.5vh; width: inherit">
+          <div class="col">
+          
+          </div> 
+        </div>
+
+        <div class="row" id="csprojects">
+          <div class="cell col-4 project-card">
+            <div class="row" id="project-header"> 
+              <h1>Spotify Group Queue Modifier</h1>
+            </div>
+
+            <div class="row" id="project-info">
+              <ul>
+                <li>Developing a web application that allows for a group of people to control a 
+                  single user’s Spotify music playback using HTML, CSS, and JavaScript with React.</li>
+                <li>You may contact me to see the code I am working on.</li>
+              </ul>
+            </div>
+
+            <div class="row" id="project-images">
+              <img src="./images/Spotify Group Queue Modifier Example.png">
+            </div>
+          </div>
+
+          <div class="cell col-4 project-card">
+            <div class="row" id="project-header"> 
+              <h1><a href="http://spring21-sps-39.appspot.com/listpuzzles.html">Puzzlr</a> - Software Product Sprint</h1>
+            </div>
+
+            <div class="row" id="project-info">
+              <ul>
+                <li>Worked with 3 other college students and a mentor to create an online puzzle generator 
+                  using HTML, CSS, Javascript, and Java Servlets</li>
+                <li>This web application allows for people to create puzzles from custom images 
+                  and share the puzzle with their friends.</li>
+              </ul>
+            </div>
+
+            <div class="row" id="project-images">
+              <img src="./images/Puzzlr example.png" >
+            </div>
+
+          </div>
+          
+          <div class="cell col-4 project-card">
+            <div class="row" id="project-header"> 
+              <h1>Modified WebThings Gateway</h1>
+            </div>
+
+            <div class="row" id="project-info" style="height:inherit">
+              <ul>
+                <li>Expanded research in improving data consistency across Internet of Things devices 
+                  using the WebThings smart home gateway</li>
+                <li>Integrated a semaphore locking mechanism that ensures the WebThings gateway atomically 
+                  completes requests sent by a single client in the order they were sent with Cassandra, an 
+                  external NoSQL distributed database, that is used to detect and prevent data inconsistencies 
+                  among separate clients.</li>
+                <li>You may contact me to see the code I worked on.</li>
+              </ul>
+            </div>
+
+            <!--<div class="row" id="project-images">
+              <img src="./images/8a.JPEG" >
+            </div>-->
+          </div>
+        </div>
+      </div>
+
+      <!--Art Portfolio-->
+      <div class="container section-container" id="artPortfolio">
+        <div class="row" style="height: 6.25vh; padding-bottom: 2.5vh; width: inherit">
+          <div class="col">
+          
+          </div>
+        </div>
+
+        <div class="row" id="artPieces">
+          <div class="cell col-4 art-col" id="art-col-1">
+
+            <!-- Art here - Self Portrait -->
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder">             
+                <div class="slide  fade  slides-1">
+                  <img src="./images/1a.JPG"/>
+                  <div class="caption-text">Self Portrait (2020)</div>
+                </div>
+
+                <div class="slide  fade  slides-1">
+                  <img src="./images/1e.JPG"/> 
+                  <div class="caption-text">Self Portrait (2020)</div>
+                </div>
+
+                <div class="slide  fade  slides-1">
+                  <img src="./images/1c.JPG"/>
+                  <div class="caption-text">Self Portrait (2020)</div>
+                </div>
+
+                <div class="slide  fade  slides-1">
+                  <img src="./images/1d.JPG"/>
+                  <div class="caption-text">Self Portrait (2020)</div>
+                </div>
+
+                <a class="prev" onclick="changeSlides(-1, 1)">&#10094</a>
+                <a class="next" onclick="changeSlides(1, 1)">&#10095</a>
+              </div>
+            </div>
             
-          <div class="slide  fade  slides-1">
-            <img src="./images/1a.JPG"/>
-            <div class="caption-text">Self Portrait (2020)</div>
+            <!-- Art here - Home thing-->
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder"> 
+                <div class="slide  fade  slides-2">
+                  <img src="./images/2a.JPG" >
+                  <div class="caption-text">Home (2021)</div>
+                </div>
+
+                <div class="slide  fade  slides-2">
+                  <img src="./images/2b.JPG" >
+                  <div class="caption-text">Home (2021)</div>
+                </div>
+
+                <a class="prev" onclick="changeSlides(-1, 2)">&#10094</a>
+                <a class="next" onclick="changeSlides(1, 2)">&#10095</a>
+                
+              </div>
+            </div>
           </div>
 
-          <div class="slide  fade  slides-1">
-            <img src="./images/1e.JPG"/> 
-            <div class="caption-text">Self Portrait (2020)</div>
+          <!-- Art here-->
+          <div class="cell col-4 art-col" id="art-col-2">
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder"> 
+                <div class="slide  fade  slides-3">
+                  <img src="./images/6a.jpeg" >
+                  <div class="caption-text">Self Portrait (2021)</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Art here-->
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder"> 
+                <div class="slide  fade  slides-4">
+                <img src="./images/4a.JPG" >
+                <div class="caption-text">Untitled (2020)</div>
+              </div>
+
+              <div class="slide  fade  slides-4">
+                <img src="./images/4b.jpeg" >
+                <div class="caption-text">Untitled (2020)</div>
+              </div>
+
+              <div class="slide  fade  slides-4">
+                <img src="./images/4c.JPG" >
+                <div class="caption-text">Untitled (2020)</div>
+              </div>
+
+              <div class="slide  fade  slides-4">
+                <img src="./images/4d.jpeg" >
+                <div class="caption-text">Untitled (2020)</div>
+              </div>
+
+              <a class="prev" onclick="changeSlides(-1, 4)">&#10094</a>
+              <a class="next" onclick="changeSlides(1, 4)">&#10095</a>
+              </div>
+            </div>
           </div>
 
-          <div class="slide  fade  slides-1">
-            <img src="./images/1c.JPG"/>
-            <div class="caption-text">Self Portrait (2020)</div>
-          </div>
+          <!-- Art here-->
+          <div class="cell col-4 art-col" id="art-col-3">
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder"> 
+                <div class="slide  fade  slides-5">
+                  <img src="./images/5a.JPEG">
+                  <div class="caption-text">Yesterday Evening (2021)</div>
+                </div>
+              
 
-          <div class="slide  fade  slides-1">
-            <img src="./images/1d.JPG"/>
-            <div class="caption-text">Self Portrait (2020)</div>
-          </div>
+                <div class="slide  fade  slides-5">
+                  <img src="./images/5b.JPEG" >
+                  <div class="caption-text">Yesterday Evening - Sketch (2020)</div>
+                </div>
 
-          <a class="prev" onclick="changeSlides(-1, 1)">&#10094</a>
-          <a class="next" onclick="changeSlides(1, 1)">&#10095</a>
+                <a class="prev" onclick="changeSlides(-1, 5)">&#10094</a>
+                <a class="next" onclick="changeSlides(1, 5)">&#10095</a>
+              </div>
+            </div>
+            
+            
+            <!-- Art here-->
+            <div class="row" style="height: 45%; margin: 2.5% 0"> 
+              <div class="col art-holder"> 
+                <div class="slide  fade  slides-6">
+                <img src="./images/3a.JPG" >
+                <div class="caption-text">Red (2020)</div>
+              </div>
+
+              <div class="slide  fade  slides-6">
+                <img src="./images/3b.JPG" >
+                <div class="caption-text">Yellow (2020)</div>
+              </div>
+
+              <div class="slide  fade  slides-6">
+                <img src="./images/3c.JPG" >
+              </div>
+
+              <div class="slide  fade  slides-6">
+                <img src="./images/3d.JPG" >
+              </div>
+
+              <a class="prev" onclick="changeSlides(-1, 6)">&#10094</a>
+              <a class="next" onclick="changeSlides(1, 6)">&#10095</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="container section-container" id="contact">
+        <div class="row" style="height: 6.25vh; padding-bottom: 2.5vh; width: inherit">
+          <div class="col">
+          
+          </div>
+        </div>
+
+        <div class="row" style="height: 93.75vh; width: inherit;">
+          
+          <div class="cell col">
+            <div class="row" id="contact-header">
+              <h1>Let's Connect</h1>
+            </div>
+                
+            <div class="row">
+              <div class="cell col" id="contact-forms">
+                <form action="/form-handler" method="POST">
+                  <p>Your Email</p>
+                  <textarea name="email-input" maxlength="35" rows="1"></textarea>
+                  <br />
+                  <p>Message</p>
+                  <textarea name="message-input" rows="15" cols="40"></textarea>
+                  <br />
+                  <input type="submit" />
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
         
-        <div class="art-container" style="align-self: flex-end;">
-
-          <div class="slide  fade  slides-2">
-            <img src="./images/3a.JPG" >
-            <div class="caption-text">Red (2020)</div>
-          </div>
-
-          <div class="slide  fade  slides-2">
-            <img src="./images/3b.JPG" >
-            <div class="caption-text">Yellow (2020)</div>
-          </div>
-
-          <div class="slide  fade  slides-2">
-            <img src="./images/3c.JPG" >
-          </div>
-
-          <div class="slide  fade  slides-2">
-            <img src="./images/3d.JPG" >
-          </div>
-
-          <a class="prev" onclick="changeSlides(-1, 2)">&#10094</a>
-          <a class="next" onclick="changeSlides(1, 2)">&#10095</a>
-        </div>
-        </div>
-
-      </section>
-
-      <!-- <section class="fwh-section" id="servlet-redirect">
-        <button onClick="sayHello();">Click Here to go be welcomed!</button>
-        <p id="hello-container"></p>
-      </section> -->
-      <section class="fwh-section" id="servlet-redirect">
-        <button onClick="randomFact();">Click Here for a random fact about me!</button>
-        <div class="servlet-response-container">
-          <p id="fact-container"></p>
-        </div>
-      </section>
-
-      <section class="fwh-section" id="contact-form">
-        <div class="left">
-          <h1>Get in touch</h1>
-        </div>
-        <div class="right">
-          <form action="/form-handler" method="POST">
-            <p>Email:</p>
-            <textarea name="email-input" cols="30"></textarea>
-            <br />
-            <p>Message:</p>
-            <textarea name="message-input" rows="15" cols="40"></textarea>
-            <br />
-            <input type="submit" />
-          </form>
-        </div>
-      </section>
-
-      <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div> -->
+      </div>
     </div>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
 </html>

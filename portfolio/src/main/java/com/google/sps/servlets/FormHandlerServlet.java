@@ -12,6 +12,9 @@ import com.google.cloud.datastore.Entity;
 import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.KeyFactory;
 
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Safelist;
+
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
     /**
@@ -20,21 +23,21 @@ public class FormHandlerServlet extends HttpServlet {
     private static final long serialVersionUID = 6734233536872851287L;
 
     @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doPost(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
-    String emailValue = request.getParameter("email-input");
-    String messageValue = request.getParameter("message-input");
+    final String emailValue = Jsoup.clean(request.getParameter("email-input"), Safelist.basic());
+    final String messageValue = Jsoup.clean(request.getParameter("message-input"), Safelist.basic());
 
     // Print the value so you can see it in the server logs.
-    System.out.println("You submitted: " + emailValue + " " + messageValue);
+    System.out.println("You are submitting: " + emailValue + " " + messageValue);
 
-    long timestamp = System.currentTimeMillis();
+    final long timestamp = System.currentTimeMillis();
 
-    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    final Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
-    FullEntity taskEntity =
+    final KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
+    final FullEntity taskEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("email", emailValue)
             .set("message", messageValue)
