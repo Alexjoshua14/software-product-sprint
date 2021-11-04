@@ -30,11 +30,9 @@ function addRandomGreeting() {
 /** 
  * Cycles through pictures
 */
-
-// I need to figure out how to seperate the
-// different picture sections. 
-let slideIndex = [0, 0];
-let slideId = ["slides-1", "slides-2"];
+ 
+let slideIndex = [0, 0, 0, 0, 0, 0];
+let slideId = ["slides-1", "slides-2", "slides-3", "slides-4", "slides-5", "slides-6"];
 
 // Next/previous controls
 function changeSlides(n, sectionNumber) {
